@@ -80,7 +80,7 @@ export function CreateTodoModal({
     if (updateTasck) {
       setTitle(updateTasck.title);
       setDescription(updateTasck.description || "");
-      setPriority(updateTasck.priority);
+      setPriority(updateTasck.priority as "LOW" | "MEDIUM" | "HIGH" | "URGENT");
       setDueDate(updateTasck.dueDate ? updateTasck.dueDate.toString() : "");
     }
   }, [updateTasck]);

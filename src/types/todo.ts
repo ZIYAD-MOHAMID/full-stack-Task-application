@@ -15,7 +15,7 @@ export type todoTasck = {
   } | null;
   status: string;
   description: string | null;
-  priority: "LOW" | "MEDIUM" | "HIGH" | "URGENT";
+  priority: "LOW" | "MEDIUM" | "HIGH" | "URGENT" | string;
   categoryId: string | null;
   createdAt: Date;
   dueDate: Date | null;

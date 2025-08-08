@@ -177,14 +177,22 @@ export function TodoList({ filter }: TodoListProps) {
                   <div className="mt-3 flex flex-wrap items-center gap-2">
                     {/* Status badge */}
                     <span
-                      className={`inline-flex px-2 py-1 text-xs font-medium rounded-full ${getStatusColor(todo.status)}`}
+                      className={`inline-flex px-2 py-1 text-xs font-medium rounded-full ${getStatusColor(
+                        todo.status as
+                          | "PENDING"
+                          | "IN_PROGRESS"
+                          | "COMPLETED"
+                          | "CANCELLED"
+                      )}`}
                     >
                       {todo.status.replace("_", " ")}
                     </span>
 
                     {/* Priority badge */}
                     <span
-                      className={`inline-flex px-2 py-1 text-xs font-medium rounded-full ${getPriorityColor(todo.priority)}`}
+                      className={`inline-flex px-2 py-1 text-xs font-medium rounded-full ${getPriorityColor(
+                        todo.priority as "LOW" | "MEDIUM" | "HIGH" | "URGENT"
+                      )}`}
                     >
                       {todo.priority}
                     </span>
