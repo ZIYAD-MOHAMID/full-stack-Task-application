@@ -88,7 +88,7 @@ export function Dashboard() {
               </button>
 
               {/* User menu */}
-              <div className="relative">
+              <div className="relative group">
                 <button
                   onClick={() => signOut()}
                   className="flex items-center space-x-2 text-gray-700 hover:text-gray-900"
@@ -104,6 +104,9 @@ export function Dashboard() {
                     {session?.user?.name || "User"}
                   </span>
                 </button>
+                <span className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 hidden group-hover:block bg-gray-800 text-white text-xs rounded py-1 px-2">
+                  Log out
+                </span>
               </div>
             </div>
           </div>
