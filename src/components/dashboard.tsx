@@ -110,12 +110,12 @@ export function Dashboard() {
         </div>
 
         {/* Stats Cards */}
-        <div className="p-4 sm:p-6">
-          <StatsCards stats={stats} />
-        </div>
-
-        {/* Todo List */}
         <div className="flex-1 overflow-auto">
+          <div className="p-4 sm:p-6">
+            <StatsCards stats={stats} />
+          </div>
+
+          {/* Todo List */}
           <TodoList filter={activeFilter} />
         </div>
       </div>

@@ -1,6 +1,11 @@
 "use client";
 
-import { CheckCircleIcon, ClockIcon, AlertCircleIcon, ListTodoIcon } from "lucide-react";
+import {
+  CheckCircleIcon,
+  ClockIcon,
+  AlertCircleIcon,
+  ListTodoIcon,
+} from "lucide-react";
 
 interface StatsCardsProps {
   stats?: {
@@ -68,10 +73,15 @@ export function StatsCards({ stats }: StatsCardsProps) {
       {cards.map((card, index) => {
         const Icon = card.icon;
         return (
-          <div key={index} className="bg-white rounded-lg shadow p-6 hover:shadow-md transition-shadow">
+          <div
+            key={index}
+            className="bg-white rounded-lg shadow p-3 lg:p-6 hover:shadow-md transition-shadow"
+          >
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm font-medium text-gray-600">{card.title}</p>
+                <p className="text-sm font-medium text-gray-600">
+                  {card.title}
+                </p>
                 <p className="text-2xl font-bold text-gray-900">{card.value}</p>
               </div>
               <div className={`p-3 rounded-full ${card.bgColor}`}>
@@ -86,7 +96,9 @@ export function StatsCards({ stats }: StatsCardsProps) {
       <div className="md:col-span-2 lg:col-span-4 bg-white rounded-lg shadow p-6 hover:shadow-md transition-shadow">
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-lg font-medium text-gray-900">Completion Rate</h3>
-          <span className="text-2xl font-bold text-blue-600">{stats.completionRate}%</span>
+          <span className="text-2xl font-bold text-blue-600">
+            {stats.completionRate}%
+          </span>
         </div>
         <div className="w-full bg-gray-200 rounded-full h-2">
           <div
