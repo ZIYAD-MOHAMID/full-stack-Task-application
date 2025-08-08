@@ -5,7 +5,7 @@ import { CheckCircleIcon, ClockIcon, TagIcon, UserIcon } from "lucide-react";
 
 export function SignInPage() {
   return (
-    <div className="min-h-screen flex">
+    <div className="min-h-screen flex flex-col-reverse xl:flex-row">
       {/* Left side - Hero section */}
       <div className="flex-1 bg-gradient-to-br from-blue-600 to-purple-700 flex items-center justify-center p-12">
         <div className="max-w-lg text-white">
